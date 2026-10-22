@@ -10,6 +10,18 @@ Opencore 1.0.8 Latest Kexts as of 22 Oct 2026
 
 
 
+
+
+OSX Versions Tested :
+
+
+
+* Ventura 13.0
+
+
+
+
+
 Working and tested so far :
 
 
