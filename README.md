@@ -52,6 +52,7 @@ Not Working or not tested yet :
 * HDMI / HDMI Sound
 * Metal
 * Sleep/Wake
+* TouchID Might work (https://github.com/hackintosh-user/hack-touchid, https://github.com/MarcelineVPQ/elitebook840-fingerprint)
 
 
 
