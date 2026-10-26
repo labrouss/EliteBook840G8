@@ -6,7 +6,7 @@ EliteBook 840 G8 - Tiger Lake Hackintosh
 
 
 
-Opencore 1.0.8 Latest Kexts as of 22 Oct 2026
+Opencore 1.0.8 Latest Kexts as of 26 Oct 2026
 
 
 
@@ -17,6 +17,9 @@ OSX Versions Tested :
 
 
 * Ventura 13.0
+* Sonoma
+* Seqouia
+* Tahoe
 
 
 
@@ -32,10 +35,10 @@ Working and tested so far :
 * USB (ACPI Patches)
 * Touchpad (VoodooI2C)
 * Keyboard (VoodooPS2)
-* Camera (USB) 
+* Camera (USB)
 * Battery Icon (ACPI Patch)
 * Thunderbolt ports 0/1 (ACPI Patch + Device Patch)
-* Graphics (WhateverXE, WhatEverXE-Graphics pkg)
+* Graphics (WhateverXE 0.5.0, WhatEverXE-Graphics 0.2 pkg)
 * Laptop Display fixed to 1980x1024
 * HP Thunderbolt Docking Station (ATM, No Video out)
 
@@ -47,7 +50,7 @@ Not Working or not tested yet :
 
 * Microphone
 * HDMI / HDMI Sound
-* Metal 
+* Metal
 * Sleep/Wake
 
 
