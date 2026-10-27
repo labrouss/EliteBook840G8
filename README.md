@@ -16,10 +16,10 @@ OSX Versions Tested :
 
 
 
-* Ventura 13.0
-* Sonoma
-* Seqouia
-* Tahoe
+* Ventura (iGPU reports 1568MB vRAM, Metal Support: 2)
+* Sonoma (iGPU reports 1568MB vRAM, Metal Support: 2)
+* Seqouia (iGPU reports 1568MB vRAM, Metal not working ATM)
+* Tahoe (iGPU reports 1568MB vRAM, Metal Support: 2)
 
 
 
@@ -36,9 +36,9 @@ Working and tested so far :
 * Touchpad (VoodooI2C)
 * Keyboard (VoodooPS2)
 * Camera (USB)
-* Battery Icon (ACPI Patch)
+* Battery Icon (ACPI Patch), VoodooSMC
 * Thunderbolt ports 0/1 (ACPI Patch + Device Patch)
-* Graphics (WhateverXE 0.5.0, WhatEverXE-Graphics 0.2 pkg)
+* Graphics (WhateverXE 0.6.0, WhatEverXE-Graphics 0.3.1 pkg)
 * Laptop Display fixed to 1980x1024
 * HP Thunderbolt Docking Station (ATM, No Video out)
 
