@@ -50,7 +50,7 @@ Not Working or not tested yet :
 
 
 * HDMI / HDMI Sound
-* Sleep/Wake
+* Sleep (S3): resume hangs in HP firmware (also on Linux), not fixable from the OS. Use **hibernation** instead: see [docs/HIBERNATION.md](docs/HIBERNATION.md)
 * TouchID Might work (https://github.com/hackintosh-user/hack-touchid, https://github.com/MarcelineVPQ/elitebook840-fingerprint)
 
 
