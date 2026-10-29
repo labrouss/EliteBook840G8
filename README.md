@@ -30,7 +30,7 @@ Working and tested so far :
 
 
 * Audio Out (Audio buttons) \* For Sequoia, Tahoe, Use HDA-Universal : https://olarila.com/files/macOS-Applications/HDA-Universal/HDAUniversal-1.0.1-Release.zip
-* Bluetooth (AX201 CNVi 8087:0026, IntelBTUnified-1.0.0.-full.zip)
+* Bluetooth (AX201 CNVi 8087:0026, IntelBTUnified-1.0.0.-full.zip) + SSDT-BTEN (power-cycles the BT core at boot: after Linux/Windows the module kept their firmware and macOS Bluetooth failed) + NVRAM `bluetoothExternalDongleFailed`/`bluetoothInternalControllerInfo` reset on every boot (as BrcmPatchRAM's README requires for Intel BT on macOS 12+)
 * WiFi AX201 (CNVi 8086:a0f0) (AirportItlwm) \* For Tahoe, Sequoia, use Laobamac AirportItlwm : https://github.com/laobamac/itlwm
 * USB (ACPI Patches), USBMap.kext (ports mapped from Linux; includes the `usb-port-number`/`usb-port-type` keys macOS Tahoe requires)
 * Touchpad (VoodooI2C), Use -vi2c-force-polling

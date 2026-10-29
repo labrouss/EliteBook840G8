@@ -134,6 +134,14 @@
 				<key>Path</key>
 				<string>SSDT-BKEY.aml</string>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Power-cycle CNVi Bluetooth (\_SB.PC00.SBTE 0/1) at boot: clears firmware left by Linux/Windows</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-BTEN.aml</string>
+			</dict>
 		</array>
 		<key>Delete</key>
 		<array>
@@ -1355,10 +1363,24 @@
 				</data>
 				<key>run-efi-updater</key>
 				<string>No</string>
+				<key>bluetoothExternalDongleFailed</key>
+				<data>
+				AA==
+				</data>
+				<key>bluetoothInternalControllerInfo</key>
+				<data>
+				AAAAAAAAAAAAAAAAAAA=
+				</data>
 			</dict>
 		</dict>
 		<key>Delete</key>
-		<dict/>
+		<dict>
+			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
+			<array>
+				<string>bluetoothExternalDongleFailed</string>
+				<string>bluetoothInternalControllerInfo</string>
+			</array>
+		</dict>
 		<key>LegacyEnable</key>
 		<false/>
 		<key>LegacyOverwrite</key>
