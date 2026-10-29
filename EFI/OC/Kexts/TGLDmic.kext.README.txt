@@ -1,0 +1,5 @@
+TGLDmic.kext is not stored in this repo. Download it from
+https://github.com/labrouss/TGLDmic/releases (TGLDmic-<version>-kext.zip)
+and put TGLDmic.kext in this folder. config.plist already loads it (after AppleALC)
+and boot-args contain -tgldmic. Then install TGLDmic-<version>.pkg once in each macOS.
+If TGLDmic.kext is missing, OpenCore skips it and boots normally.
