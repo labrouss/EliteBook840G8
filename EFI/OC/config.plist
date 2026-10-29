@@ -662,6 +662,24 @@
 				<key>Arch</key>
 				<string>Any</string>
 				<key>BundlePath</key>
+				<string>RTCMemoryFixup.kext</string>
+				<key>Comment</key>
+				<string>RTCMemoryFixup 1.0.7 + rtcfx_exclude=80-AB: keep AppleRTC out of HP CMOS (BIOS error 005)</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/RTCMemoryFixup</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
 				<string>VirtualSMC.kext</string>
 				<key>Comment</key>
 				<string>V1.3.8</string>
@@ -1167,7 +1185,7 @@
 			<key>DisableLinkeditJettison</key>
 			<true/>
 			<key>DisableRtcChecksum</key>
-			<false/>
+			<true/>
 			<key>ExtendBTFeatureFlags</key>
 			<false/>
 			<key>ExternalDiskIcons</key>
@@ -1327,7 +1345,7 @@
 				Rg==
 				</data>
 				<key>boot-args</key>
-				<string>-v alcid=11 alc-delay=1000  -allow3d -disablegfxfirmware watchdog=0 -vi2c-force-polling -wegnoegpu -tb2pciout -llilubetaall msgbuf=1048576  keepsyms=1 -igfxdvmt -tgldmic</string>
+				<string>-v alcid=11 alc-delay=1000  -allow3d -disablegfxfirmware watchdog=0 -vi2c-force-polling -wegnoegpu -tb2pciout -llilubetaall msgbuf=1048576  keepsyms=1 -igfxdvmt -tgldmic rtcfx_exclude=80-AB</string>
 				<key>csr-active-config</key>
 				<data>
 				AwgAAA==

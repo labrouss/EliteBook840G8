@@ -19,6 +19,20 @@ When macOS enters "S3", the chipset powers off instead. macOS has flushed the di
 file system is safe; **open apps and unsaved work are lost**, like after a shutdown. On the next boot
 `pmset -g log` shows `Failure during sleep … EFI/Bootrom Failure`, which is expected here.
 
+## RTC / CMOS protection (keep it, also without hibernation)
+macOS's AppleRTC writes into the RTC memory (hibernation variables at 0x80-0xAB, checksum at 0x58-0x59),
+which on this HP holds the BIOS settings: the BIOS then shows **Real-Time Clock Power Loss (005)**, even
+after a normal shutdown once those variables exist. The EFI therefore always has:
+
+| Setting | Value |
+|---|---|
+| `Kernel > Add` | `RTCMemoryFixup.kext` 1.0.7 (after Lilu) |
+| boot-arg | `rtcfx_exclude=80-AB` |
+| `Kernel > Quirks > DisableRtcChecksum` | `true` |
+
+On an existing install add the boot-arg to NVRAM once: `sudo nvram boot-args="$(nvram boot-args | cut -f2-) rtcfx_exclude=80-AB"`.
+After a 005 message: F10 → check the settings → save, so the BIOS writes a valid checksum again.
+
 ## macOS settings (once per macOS install)
 ```bash
 sudo pmset -a hibernatemode 0 standby 0             # no sleep image
