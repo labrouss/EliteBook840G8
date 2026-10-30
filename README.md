@@ -39,15 +39,11 @@ Working and tested so far :
 
 Camera (USB, HP HD Camera 0408:5348). With WhateverXe-Graphics (Metal) installed, move its video-acceleration bundle away, otherwise the hardware MJPEG decoder crashes (Photo Booth crashes / no image in Settings):
 
-&#x20; ```
-
-&#x20; sudo mkdir -p /Library/GPUBundles.disabled
-
-&#x20; sudo mv /Library/GPUBundles/AppleIntelTGLGraphicsVADriver.bundle /Library/GPUBundles.disabled/
-
-&#x20; sudo killall UVCAssistant VTDecoderXPCService
-
-&#x20; ```
+```
+sudo mkdir -p /Library/GPUBundles.disabled
+sudo mv /Library/GPUBundles/AppleIntelTGLGraphicsVADriver.bundle /Library/GPUBundles.disabled/
+sudo killall UVCAssistant VTDecoderXPCService
+```
 
 * Battery Icon (ACPI Patch), VoodooSMC
 * Thunderbolt ports 0/1 (ACPI Patch + Device Patch)
