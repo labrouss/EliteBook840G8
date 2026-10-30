@@ -9,7 +9,7 @@ EliteBook 840 G8 - Tiger Lake Hackintosh
 Opencore 1.0.8 Latest Kexts as of 28 Oct 2026
 
 
-
+[![Hits](https://hits.sh/github.com/labrouss/EliteBook840G8.svg?view=today-total&style=flat-square&label=visits)](https://hits.sh/github.com/labrouss/EliteBook840G8/)
 
 
 OSX Versions Tested :
