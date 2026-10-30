@@ -48,6 +48,14 @@ sudo killall UVCAssistant VTDecoderXPCService
 * Battery Icon (ACPI Patch), VoodooSMC
 * Thunderbolt ports 0/1 (ACPI Patch + Device Patch)
 * Graphics (WhateverXE 0.6.1, WhatEverXE-Graphics 0.3.2 pkg) :
+
+Same fix as for camera, moving AppleIntelTGLGraphicsVADriver.bundle to /Library/GPUBundles.disabled forces system to CPU only video decoding that also helps with videos on Safari etc. 
+```
+sudo mkdir -p /Library/GPUBundles.disabled
+sudo mv /Library/GPUBundles/AppleIntelTGLGraphicsVADriver.bundle /Library/GPUBundles.disabled/
+sudo killall UVCAssistant VTDecoderXPCService
+```
+
 * Laptop Display fixed to 1980x1024
 * HP Thunderbolt Docking Station (ATM, No Video out)
 * **Internal microphone** (4-mic array on the Smart Sound DSP): [TGLDmic](https://github.com/labrouss/TGLDmic) kext + boot-arg `-tgldmic`, plus the TGLDmic `.pkg` (Core Audio plug-in) installed once per macOS. Tested on Ventura (AppleALC) and Tahoe (HDAUniversal)
