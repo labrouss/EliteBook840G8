@@ -35,10 +35,23 @@ Working and tested so far :
 * USB (ACPI Patches), USBMap.kext (ports mapped from Linux; includes the `usb-port-number`/`usb-port-type` keys macOS Tahoe requires)
 * Touchpad (VoodooI2C), Use -vi2c-force-polling
 * Keyboard (VoodooPS2)
-* Camera (USB)
+* Camera (USB), In case you get photobooth crashes, try moving the following to disable VADriver :
+
+Camera (USB, HP HD Camera 0408:5348). With WhateverXe-Graphics (Metal) installed, move its video-acceleration bundle away, otherwise the hardware MJPEG decoder crashes (Photo Booth crashes / no image in Settings):
+
+&#x20; ```
+
+&#x20; sudo mkdir -p /Library/GPUBundles.disabled
+
+&#x20; sudo mv /Library/GPUBundles/AppleIntelTGLGraphicsVADriver.bundle /Library/GPUBundles.disabled/
+
+&#x20; sudo killall UVCAssistant VTDecoderXPCService
+
+&#x20; ```
+
 * Battery Icon (ACPI Patch), VoodooSMC
 * Thunderbolt ports 0/1 (ACPI Patch + Device Patch)
-* Graphics (WhateverXE 0.6.1, WhatEverXE-Graphics 0.3.2 pkg) : 
+* Graphics (WhateverXE 0.6.1, WhatEverXE-Graphics 0.3.2 pkg) :
 * Laptop Display fixed to 1980x1024
 * HP Thunderbolt Docking Station (ATM, No Video out)
 * **Internal microphone** (4-mic array on the Smart Sound DSP): [TGLDmic](https://github.com/labrouss/TGLDmic) kext + boot-arg `-tgldmic`, plus the TGLDmic `.pkg` (Core Audio plug-in) installed once per macOS. Tested on Ventura (AppleALC) and Tahoe (HDAUniversal)
