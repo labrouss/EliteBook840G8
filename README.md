@@ -46,7 +46,7 @@ sudo killall UVCAssistant VTDecoderXPCService
 ```
 
 * Battery Icon (ACPI Patch), VoodooSMC
-* Thunderbolt ports 0/1 (ACPI Patch + Device Patch)
+* Thunderbolt 4 (both Type-C ports): PCIe tunnelling, hot-plug and cold-plug work (SSDT-TBT4 + `RMVP`/`built-in` device properties on `00:07.0`/`00:07.1`). Tunnels are built by the firmware; macOS has no driver for the built-in Thunderbolt controller, so System Information > Thunderbolt/USB4 says "No hardware was found" (cosmetic). Set BIOS > Advanced > Port Options > Thunderbolt security level to "PCIe and DisplayPort - No Security". Test tool: [Tools/tbtest](Tools/tbtest/README.md)
 * Graphics (WhateverXE 0.6.1, WhatEverXE-Graphics 0.3.2 pkg) :
 
 Same fix as for camera, moving AppleIntelTGLGraphicsVADriver.bundle to /Library/GPUBundles.disabled forces system to CPU only video decoding that also helps with videos on Safari etc. 
@@ -57,7 +57,7 @@ sudo killall UVCAssistant VTDecoderXPCService
 ```
 
 * Laptop Display fixed to 1980x1024
-* HP Thunderbolt Docking Station (ATM, No Video out)
+* HP Thunderbolt Dock: USB (ASMedia controller, keyboard/receiver), Ethernet (Broadcom 57762, native driver) and dock audio work, hot-plugged or attached at boot. No video out through the dock yet
 * **Internal microphone** (4-mic array on the Smart Sound DSP): [TGLDmic](https://github.com/labrouss/TGLDmic) kext + boot-arg `-tgldmic`, plus the TGLDmic `.pkg` (Core Audio plug-in) installed once per macOS. Tested on Ventura (AppleALC) and Tahoe (HDAUniversal)
 
 
