@@ -59,6 +59,8 @@ sudo killall UVCAssistant VTDecoderXPCService
 * Laptop Display fixed to 1980x1024
 * HP Thunderbolt Dock: USB (ASMedia controller, keyboard/receiver), Ethernet (Broadcom 57762, native driver) and dock audio work, hot-plugged or attached at boot. No video out through the dock yet
 * **Internal microphone** (4-mic array on the Smart Sound DSP): [TGLDmic](https://github.com/labrouss/TGLDmic) kext + boot-arg `-tgldmic`, plus the TGLDmic `.pkg` (Core Audio plug-in) installed once per macOS. Tested on Ventura (AppleALC) and Tahoe (HDAUniversal)
+* TouchID using RidgeKey on https://github.com/labrouss/ridgeKey/ adds finger print reader functionality to my EliteBook 840 G8
+
 
 
 
@@ -68,8 +70,6 @@ Not Working or not tested yet :
 
 * HDMI / HDMI Sound
 * Sleep (S3): resume hangs in HP firmware (also on Linux), not fixable from the OS. This EFI turns macOS sleep into a clean power-off: see [docs/SLEEP.md](docs/SLEEP.md)
-* TouchID Might work (https://github.com/hackintosh-user/hack-touchid, https://github.com/MarcelineVPQ/elitebook840-fingerprint)
-
 
 
 Tools Used :
